@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+    ================================================== -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Specific Meta
+    ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="Personal Portfolio is a modern presentation HTML5 Portfolio HTML Template." />
+  <meta name="keywords" content="HTML5, Template, Design, portfolio, Personal Portfolio, Single portfolio" />
+  <meta name="author" content="creative-wp" />
+
+  <!-- Titles
+    ================================================== -->
+  <title>CuraTrax</title>
+
+  <!-- Favicons
+    ================================================== -->
+  <link rel="shortcut icon" href="assets/images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/android-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-144x144.png" />
+
+  <!-- Custom Font
+    ================================================== -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,800,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS
+    ================================================== -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/simple-scrollbar.css" />
+  <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.all.min.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/icomoon.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script src="assets/js/modernizr.min.js"></script>
+</head>
+<style>
+  #popup-message {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    z-index: 10000 !important;
+    font-weight: bold;
+    transition: opacity 0.4s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .custom-select-wrapper {
+    position: relative;
+  }
+
+  .custom-select-wrapper select {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 40px 10px 1px;
+    appearance: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: white;
+    color: #333;
+  }
+
+  .custom-select-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23666' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 16px;
+    pointer-events: none;
+  }
+
+  .contact-form-area {
+    position: relative;
+    padding: 70px;
+    margin: 0 auto;
+  }
+
+  .contact-form-area:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background-color: #1a3c34;
+    /* Assumed $color__primary */
+    content: "";
+  }
+
+  @media only screen and (max-width: 1199px) {
+    .contact-form-area {
+      padding: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 575px) {
+    .contact-form-area {
+      padding: 15px;
+    }
+  }
+
+  .contact-form {
+    background-color: #fff;
+    /* $white */
+    position: relative;
+    z-index: 1;
+    padding: 50px 50px 60px;
+  }
+
+  .contact-form:before {
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    content: "";
+    border: 10px solid rgba(255, 255, 255, 0.05);
+    /* $white with opacity */
+    left: -10px;
+    top: -10px;
+  }
+
+  .contact-form .form-group {
+    margin-bottom: 55px;
+  }
+
+  .contact-form .form-group label {
+    display: block;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    color: #1a3c34;
+    /* $color__heading */
+    font-size: 16px;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+    /* $color__border-one */
+    padding: 0 0 10px !important;
+  }
+
+  .contact-form .form-group input:focus,
+  .contact-form .form-group textarea:focus {
+    color: #1a3c34;
+    border-bottom-color: #1a3c34 !important;
+    /* $color__primary */
+  }
+
+  .contact-form .form-group textarea {
+    min-height: 120px;
+    max-width: 100%;
+  }
+
+  .contact-form .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  .contact-form .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+  }
+
+  .contact-form .btn-contact {
+    background-color: #ff4d4d;
+    /* Matches screenshot */
+    color: white;
+    padding: 0px 30px 0px 30px;
+    border-radius: 50px 0px 50px 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    /* Semi-bold, matches Poppins font in screenshot */
+    font-family: 'Poppins', sans-serif;
+    /* Ensure font consistency */
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: background-color 0.3s ease;
+    /* Smooth hover transition */
+    box-shadow: none;
+    /* Remove any Bootstrap shadow */
+    outline: none;
+    /* Remove focus outline */
+  }
+
+  .contact-form .btn-contact:hover {
+    background-color: #e63e3e;
+    /* Slightly darker red on hover */
+  }
+
+  .contact-form .btn-contact:focus {
+    box-shadow: none;
+    /* Remove Bootstrap focus shadow */
+  }
+
+  .contact-form .btn-contact .status {
+    bottom: 0;
+    height: 1.375rem;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5rem;
+  }
+
+  .contact-form .btn-contact span {
+    transition: opacity 0.3s ease;
+  }
+
+  .contact-form .btn-contact .status .spinner {
+    left: .3125rem;
+    transition: opacity 0.3s ease;
+    top: .1875rem;
+    position: absolute;
+    opacity: 0;
+    color: white;
+    /* Ensure spinner is white to match button text */
+    font-size: 1rem;
+    /* Adjust spinner size */
+  }
+
+  .contact-form .btn-contact.processing span {
+    opacity: 0.2;
+  }
+
+  .contact-form .btn-contact.processing .spinner {
+    opacity: 1;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    .contact-form {
+      padding: 40px 30px 45px;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .contact-form {
+      padding: 30px 15px 35px;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .contact-form .form-group label {
+      margin-bottom: 0px;
+      font-size: 12px;
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+      font-size: 15px;
+    }
+  }
+
+  .contact-block-area .contact-form-area .contact-form .form-group label {
+    color: red;
+  }
+  #responsive-logo-bg {
+  width: 67px; /* Example width - set as needed */
+  height: 67px; /* Example height - set as needed */
+  background-image: url('assets/images/logo/CT_Logo_Enhanced 1 1.png');
+  background-size: contain; /* Or 'cover', or specific values */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Background image for screens with a maximum width of 1198px */
+@media (max-width: 1198px) {
+  #responsive-logo-bg {
+    background-image: url('assets/images/logo/CT_Logo_Enhanced 2 1.png'); /* Replace with your mobile/smaller screen logo */
+  }
+}
+</style>
+
+<body data-spy="scroll" data-offset="170" data-target=".navigation-area">
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Preloader
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <div class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-icon">
+        <span></span>
+        <span></span>
+      </div>
+      <!-- /preloader-icon -->
+    </div>
+    <!-- /preloader-inner -->
+  </div>
+  <!-- /preloader -->
+
+  <!--********************************************************-->
+  <!--********************* SITE CONTENT *********************-->
+  <!--********************************************************-->
+  <div class="site-content home-one">
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Site Header
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <header class="site-header header-style-one">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="navigation-area">
+              <!-- Site Navigation -->
+              <div class="site-navigation">
+                <!-- Site Branding -->
+                <div class="site-branding">
+                  <a href="index.html">
+                    <div id="responsive-logo-bg" alt="Site Logo"></div>
+                  </a>
+                </div>
+                <!-- /.site-branding -->
+                <div class="hamburger-menus">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <nav class="navigation">
+                  <div class="overlaybg"></div>
+                  <!-- /.overlaybg -->
+                  <!-- Main Menu -->
+                  <div class="menu-wrapper">
+                    <div class="menu-content">
+                      <ul class="mainmenu">
+                        <li>
+                          <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <!-- <li>
+                                                    <a class="nav-link" href="#about-block">About</a>
+                                                </li> -->
+                        <li class="megamenu">
+                          <a class="nav-link" href="#">Services</a>
+                          <ul class="sub-menu megamenu-main">
+                            <li>
+                              <div class="megamenu-wrapper">
+                                <div class="container megamenu-container">
+                                  <div class="row">
+                                    <div class="col-lg-3 megamenu-column">
+                                      <h3 class="megamenu-heading">For Healthcare</h3>
+                                      <ul class="custom-megamenu">
+                                        <li><a href="incident-reporting-portfolio.html">Incident Reporting</a></li>
+                                        <li><a href="policy-manager-portfolio.html">Policy Manager</a></li>
+                                        <li><a href="credentialing-portfolio.html">Credentialing System</a></li>
+                                      </ul>
+                                    </div>
+                                    <!-- <div class="col-lg-3 megamenu-column">
+                                            <h3 class="megamenu-heading">For Business</h3>
+                                            <ul class="custom-megamenu">
+                                                <li><a href="policy-manager-portfolio.html">Policy Manager</a></li>
+                                            </ul>
+                                        </div> -->
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                        <!-- <li>
+                            <a class="nav-link" href="team.html">Team</a>
+                          </li> -->
+                        <li>
+                          <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <!-- <li>
+                                                    <a class="nav-link" href="#testimonial-block">Testimonial</a>
+                                                </li> -->
+                      </ul>
+                      <!-- /.menu-list -->
+                    </div>
+                    <!-- /.hours-content-->
+                  </div>
+                  <!-- /.menu-wrapper -->
+                </nav>
+              </div>
+              <!-- /.site-navigation -->
+
+              <div class="header-navigation-right">
+                <!-- <div class="contact-info">
+                                    Call Us <a href="#">+12 348.247.2548</a>
+                                </div>~./ contact-info ~ -->
+                <!-- <div class="lets-talk-area">
+                                    <a class="btn btn-default" href="#">Let's Talk</a>
+                                </div> -->
+              </div>
+              <!--~./ header-navigation-right ~-->
+            </div>
+            <!--  /.navigation-area -->
+          </div>
+          <!--  /.col-12 -->
+        </div>
+        <!--  /.row -->
+      </div>
+      <!--  /.container-fluid -->
+    </header>
+    <!--~~./ end site header ~~-->
+    <!--~~~ Sticky Header ~~~-->
+    <div id="sticky-header"></div>
+    <!--~./ end sticky header ~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Hero Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div id="hero-block" class="hero-block style-one bg-image-right pd-t-255 mrb-175"
+      style="background-image: url('assets/images/Home/doctor-working-in-hospital-use-calculator-healthc-2024-12-19-15-02-23-utc\(1\).jpg')">
+      <div class="hero-shape-overlay bg-image-100" style="background-image: url('assets/images/shape/hero1.png')"></div>
+      <div class="animation-element">
+        <img src="assets/images/shape/animation/Shapa.png" alt="" class="shape-zero" />
+        <img src="assets/images/shape/animation/Shapa-1.png" alt="" class="shape-one" />
+        <img src="assets/images/shape/animation/Shapa-2.png" alt="" class="shape-two" />
+        <img src="assets/images/shape/animation/Shapa-3.png" alt="" class="shape-three" />
+        <img src="assets/images/shape/animation/Shapa-4.png" alt="" class="shape-four" />
+        <img src="assets/images/shape/animation/Shapa-5.png" alt="" class="shape-five" />
+        <img src="assets/images/shape/animation/Shapa-6.png" alt="" class="shape-six" />
+        <img src="assets/images/shape/animation/Shapa-7.png" alt="" class="shape-seven" />
+      </div>
+      <!-- /.animation-element -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="hero-content-area">
+              <h2 class="hero-title mrb-40 pd-b-70" style="font-size: 45px">
+                Built for healthcare. Powered by
+                <span>CuraTrax.</span> Trusted for compliance.
+              </h2>
+              <!-- /.hero-title -->
+              <div class="hero-desc">
+                <p>
+                  An integrated suite for real-time incident reporting, robust policy management, and seamless
+                  credentialing, designed for healthcare institutions striving for compliance and operational
+                  excellence.
+                </p>
+              </div>
+              <!-- /.hero-desc -->
+            </div>
+          </div>
+          <!-- /.col-lg-6 -->
+
+          <div class="col-lg-12">
+            <div class="hero-block-bottom mrt-35">
+              <div class="form-group-btn pd-l-25">
+                <a href="https://swprojectm.s3.ap-south-1.amazonaws.com/Videos/Curatrax.mp4" class="video-btn video-popup mrr-50">
+                  <span class="icon-play31"></span>
+                </a>
+                <a class="btn btn-default btn-primary" href="BookADemo.html">Book a Demo</a>
+              </div>
+              <!-- /.form-group-btn -->
+               <!-- <div class="contact-info-block">
+              <div class="social-status" style="margin-top: 125px;">
+                <a href="https://www.facebook.com/stelliteworks/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa fa-facebook"></i></a>
+                <!-- <a href="#"><i class="fa fa-twitter"></i></a>
+                               <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="https://www.linkedin.com/company/stellite-works-llc/" target="_blank"
+                  rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+              </div> -->
+              <!-- </div> -->
+              <!-- /.social-status-->
+            </div>
+            <div style="margin-top: 170px">
+              <h2 class="hero-title" style="text-align: center; font-size: 45px">
+                <span>Who is CuraTrax For?</span>
+              </h2>
+              <div class="block-content-info">
+                <p class="description mrb-55">
+                  <b>CuraTrax is an all-in-one compliance solution built for
+                    modern organizations.</b>
+                  Designed to support operations at every scale, CuraTrax
+                  delivers a centralized, scalable, and standardized
+                  platform that empowers teams to manage incident reporting,
+                  policy governance, and credentialing workflows.
+
+                  With
+                  CuraTrax, organizations ensure
+                  regulatory compliance, operational consistency, and
+                  organizational accountability delivering trust,
+                  transparency, and transformation at every level.
+                </p>
+                <!-- <a class="btn btn-default" href="team.html">Book a Demo</a> -->
+              </div>
+            </div>
+            <!-- /.hero-block-bottom -->
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+        <!--  /.row -->
+      </div>
+      <!--  /.container -->
+    </div>
+    <!-- /.hero-block -->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start About Us Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <!--~~./ end about us block ~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Work brand Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!-- <div class="work-brand-block mrb-200">
+            <div class="container ml-t-15 ml-b-10">
+                <div class="row">
+                    <div class="col-12">
+                      
+                        <div class="brands-carousel owl-carousel">
+                            <div class="brands-link">
+                                <img src="assets/images/brand/1.png" alt="logo">
+                            </div>
+                            <div class="brands-link">
+                                <img src="assets/images/brand/2.png" alt="logo">
+                            </div>
+                            <div class="brands-link">
+                                <img src="assets/images/brand/3.png" alt="logo">
+                            </div>
+                            <div class="brands-link">
+                                <img src="assets/images/brand/4.png" alt="logo">
+                            </div>
+                            <div class="brands-link">
+                                <img src="assets/images/brand/4.png" alt="logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!--~./ end popular brands block ~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start service Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div id="service-block" class="service-block mrb-190">
+      <div class="container ml-b-50">
+        <!-- Title Row -->
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-5" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+            <div class="section-title">
+              <h6 class="title-main" style="font-size: 33px">
+                Smart Incident Reporting
+              </h6>
+              <!--  /.title-sub -->
+              <h2 class="title-sub">
+                Empowering teams to capture and resolve incidents swiftly with
+                zero friction.
+              </h2>
+              <!-- /.title-main -->
+            </div>
+            <!-- /.section-title -->
+            <div class="block-content-info">
+              <p class="description mrb-55">
+                Proactively manage workplace incidents for a safer, compliant,
+                and transparent environment.
+              </p>
+              <a class="btn btn-default" href="BookADemo.html">Book a Demo</a>
+            </div>
+            <!-- /.about-content -->
+          </div>
+          <!-- /.col-lg-5 -->
+
+          <div class="col-lg-6">
+            <div class="service-card-list">
+              <div class="row">
+                <div class="col-lg-6 col-md-6">
+                  <div class="service-card" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+                    <div class="service-icon bg-zinnwaldite">
+                      <span class="fas fa-file-alt"></span>
+                      <!-- Audit Trail -->
+                    </div>
+                    <h3 class="service-title">
+                      Audit Trail & Historical Log
+                    </h3>
+                    <!-- /.service-title -->
+                    <p>
+                      Maintain complete records of changes, actions, and
+                      reviews for transparency and legal defense.
+                    </p>
+                  </div>
+                  <!-- /.service-card -->
+
+                  <div class="service-card" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+                    <div class="service-icon bg-silver-tree">
+                      <span class="fas fa-shield-alt"></span>
+                      <!-- Security/Compliance -->
+                    </div>
+                    <!-- /.service-icon -->
+                    <h3 class="service-title">
+                      HIPAA Compliant Architecture
+                    </h3>
+                    <!-- /.service-title -->
+                    <p>
+                      Ensure secure handling of sensitive data aligned with
+                      healthcare regulations.
+                    </p>
+                  </div>
+                  <!-- /.service-card -->
+                </div>
+                <!-- /.col-lg-6 -->
+
+                <div class="col-lg-6 col-md-6 pd-t-70">
+                  <div class="service-card" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+                    <div class="service-icon bg-medium-purple">
+                      <span class="fas fa-users-cog"></span>
+                      <!-- Role Management -->
+                    </div>
+                    <!-- /.service-icon -->
+                    <h5 class="service-title">
+                      Role Based Access to Dashboards
+                    </h5>
+                    <!-- /.service-title -->
+                    <p>
+                      Tailored insights for Admins, Risk Managers, and
+                      Department Heads ensuring relevant visibility.
+                    </p>
+                  </div>
+                  <!-- /.service-card -->
+
+                  <div class="service-card" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+                    <div class="service-icon bg-curious-blue">
+                      <span class="fas fa-notes-medical"></span>
+                      <!-- Medical Notes / Reporting -->
+                    </div>
+                    <!-- /.service-icon -->
+                    <h5 class="service-title">
+                      SBAR-Based Structured Reporting
+                    </h5>
+                    <!-- /.service-title -->
+                    <p>
+                      Incident submission guided through SBAR to improve
+                      clarity and reduce investigation time.
+                    </p>
+                  </div>
+                  <!-- /.service-card -->
+                  <!-- /.service-card -->
+                </div>
+                <!-- /.col-lg-6 -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.service-card-list -->
+          </div>
+          <!-- /.col-lg-9 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.service-block -->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Team Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div id="team-block" class="team-block mrb-200">
+      <div class="container">
+        <!-- Title Row -->
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-8">
+            <div class="mock-up-thumb pd-r-10">
+              <img
+                src="assets/images/Home/CuraTrax Policy Manager_ Streamlining Policy Management - visual selection - Copy.png"
+                alt="About Mock" />
+
+            </div>
+            <!-- /.team-member-thumb-area -->
+          </div>
+          <!-- /.col-lg-7 -->
+
+          <div class="col-lg-4" data-animate="hg-fadeInRight" data-duration="1.0s" data-offset="100">
+            <div class="section-title">
+              <h4 class="title-main" style="font-size: 33px">Policy Manager</h4>
+              <!--  /.title-sub -->
+              <h2 class="title-sub">
+                Centralized and Built for Control
+                Streamline policy creation in
+                one intelligent platform.
+              </h2>
+              <!-- /.title-main -->
+            </div>
+            <!-- /.section-title -->
+            <div class="block-content-info">
+              <p class="description mrb-55">
+                Simplify policy governance, track approvals, and ensure team-wide compliance, all from a single,
+                centralized platform.
+              </p>
+              <a class="btn btn-default" href="BookADemo.html">Book a Demo</a>
+            </div>
+            <!-- /.block-content-info -->
+          </div>
+          <!-- /.col-lg-5 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!--~~./ end Team block ~~-->
+    <div id="about-block" class="about-us-block mrb-150">
+      <div class="container">
+        <!-- Title Row -->
+        <div class="row align-items-center">
+
+          <!-- /.col-lg-7 -->
+          <div class="col-lg-4" style="margin-top: 90px;">
+            <div class="section-title">
+              <h6 class="title-main" style="font-size: 33px">
+                Credentialing System
+              </h6>
+              <!--  /.title-sub -->
+              <h2 class="title-sub">
+                Smarter Credentialing. Safer Compliance. Seamless Management.
+              </h2>
+              <p class="description">
+                Stay ahead of expirations, ensure compliance, and streamline
+                staff onboarding with our automated credential management
+                platform.
+              </p>
+              <!-- /.title-main -->
+            </div>
+            <!-- /.section-title -->
+            <div class="block-content-info about-content">
+              <div class="quote-icon">
+                <img src="assets/images/icon/quote.png" alt="" />
+              </div>
+              <!-- <div>
+                  <span style="font-weight: bold"
+                    >Centralized Provider Profiles</span
+                  >
+                </div>
+                <p class="description mrb-25">
+                  Maintain a complete provider profile with licenses, certifications, education, IDs, and affiliations.
+                </p>
+                <div>
+                  <span style="font-weight: bold"
+                    >License & Certification Tracking</span
+                  >
+                </div>
+                <p class="description mrb-15">
+                  Monitor expiry dates, automate renewal reminders, and attach
+                  digital copies of documents.
+                </p>
+                <div><span style="font-weight: bold">Document Uploads</span></div>
+                <p class="description mrb-15">
+                  Enable secure uploading of licenses, training certificates,
+                  insurance, background checks,etc.
+                </p>
+                <div>
+                  <span style="font-weight: bold"
+                    >Digital Credential Wallet</span
+                  >
+                </div>
+                <p class="description mrb-15">
+                  Provide healthcare professionals with a digital wallet to
+                  easily access and manage their credentials.
+                </p> -->
+              <div style="display: flex;justify-content: start;">
+                <a class="btn btn-default" href="BookADemo.html">Book a Demo</a>
+              </div>
+              <!-- <h4 class="author-name"><span>Primary Source Verification (PSV)</span></h4>
+                            <p class="description mrb-15">- Integrate verification steps directly within the tool (e.g., NPI, DEA, license boards)—ensuring trusted, validated credentials.</p> -->
+              <!-- <h4 class="author-name"><span>Customizable Reporting & Dashboardse</span></h4>
+                            <p class="description mrb-15">- Generate tailored reports and dashboards to gain insights into credentialing activities and compliance status.</p>
+                            <h4 class="author-name"><span>Smart Renewal Reminders</span></h4>
+                            <p class="description mrb-15">- Automate the process of sending reminders for upcoming renewals to both administrators and staff.</p> -->
+            </div>
+            <!-- /.about-content -->
+          </div>
+          <div class="col-lg-8">
+            <div class="mock-up-thumb">
+              <img src="assets/images/Home/Credentialing - visual selection (1).png" alt="About Mock" />
+
+            </div>
+            <!-- /.mock-up-block -->
+          </div>
+          <!-- /.col-lg-5 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Innovation Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!-- <div
+        id="innovation-block"
+        class="innovation-block innovation-block-one mrb-195"
+      >
+        <div class="container-fluid pd-r-0">
+          <!-- Title Row -->
+    <!-- <div class="row align-items-center">
+            <div class="col-lg-5">
+              <div class="innovation-contant-area">
+                <div class="section-title">
+                  <h2 class="title-main">Smart Solutions</h2> -->
+    <!--  /.title-sub -->
+    <!-- <img src="assets/images/icon/divider.png" alt="icon"> -->
+    <!-- <h5 class="title-sub">
+                    The Future of Credentialing, Incident Reporting & Policy
+                    Management.
+                  </h5> -->
+    <!-- /.title-main -->
+    <!-- <p class="description mrb-25">
+                    Success in business is driven by two key forces:
+                    streamlining operations through innovation and ensuring
+                    compliance and efficiency with the right solutions. Our
+                    Credentialing System, Incident Reporting, and Policy Manager
+                    empower organizations to stay compliant, reduce risks, and
+                    operate seamlessly.
+                  </p>
+                </div> -->
+    <!-- /.section-title -->
+
+    <!-- <div class="btn-links-area">
+                  <button class="btn-links btn-prev">
+                    <span class="icon-arrows"></span>
+                  </button>
+                  <button class="btn-links btn-next">
+                    <span class="icon-arrows-1"></span>
+                  </button>
+                </div> -->
+    <!--~./ end btn links area ~-->
+    <!-- </div> -->
+    <!-- /.innovation-contant-area -->
+    <!-- </div> -->
+    <!-- /.col-lg-5 -->
+
+    <!-- <div class="col-lg-7">
+              <div
+                id="innovation-carousel"
+                class="owl-carousel reveal-left"
+                data-owl-items="2"
+                data-owl-margin="30"
+                data-owl-dots="0"
+                data-owl-loop="1"
+                data-owl-center="0"
+              >
+                <div class="item">
+                  <div class="portfolio-item portfolio-one">
+                    <figure class="portfolio-thumb">
+                      <img
+                        src="assets/images/Home/policy-manager.jpeg"
+                        alt="Portfolio Item"
+                      />
+                      <div class="content">
+                        <div class="portfolio-title">
+                          <h3>
+                            <a href="policy-manager-portfolio.html"
+                              >Have a look</a
+                            >
+                          </h3>
+                        </div>
+                        <div class="icon">
+                          <a href="policy-manager-portfolio.html"
+                            ><span class="fa fa-long-arrow-right"></span
+                          ></a>
+                        </div>
+                      </div> -->
+    <!-- /.content -->
+    <!-- </figure> -->
+    <!-- /.portfolio-thumb -->
+    <!-- </div> -->
+    <!-- /.portfolio-item -->
+    <!-- </div> -->
+    <!-- /.item -->
+
+    <!-- <div class="item">
+                  <div class="portfolio-item portfolio-one">
+                    <figure class="portfolio-thumb">
+                      <img
+                        src="assets/images/Home/IR-4.png"
+                        alt="Portfolio Item"
+                      />
+                      <div class="content">
+                        <div class="portfolio-title">
+                          <h3>
+                            <a href="incident-reporting-portfolio.html"
+                              >Have a look</a
+                            >
+                          </h3>
+                        </div>
+                        <div class="icon">
+                          <a href="incident-reporting-portfolio.html"
+                            ><span class="fa fa-long-arrow-right"></span
+                          ></a>
+                        </div>
+                      </div> -->
+    <!-- /.content -->
+    <!-- </figure> -->
+    <!-- /.portfolio-thumb -->
+    <!-- </div> -->
+    <!-- /.portfolio-item -->
+    <!-- </div> -->
+    <!-- /.item -->
+    <!-- <div class="item">
+                  <div class="portfolio-item portfolio-one">
+                    <figure class="portfolio-thumb">
+                      <img
+                        src="assets/images/Home/CA.png"
+                        alt="Portfolio Item"
+                      />
+                      <div class="content">
+                        <div class="portfolio-title">
+                          <h3>
+                            <a href="credentialing-portfolio.html"
+                              >Have a look</a
+                            >
+                          </h3>
+                        </div>
+                        <div class="icon">
+                          <a href="credentialing-portfolio.html"
+                            ><span class="fa fa-long-arrow-right"></span
+                          ></a>
+                        </div>
+                      </div> -->
+    <!-- /.content -->
+    <!-- </figure> -->
+    <!-- /.portfolio-thumb -->
+    <!-- </div> -->
+    <!-- /.portfolio-item -->
+    <!-- </div> -->
+    <!-- /.item -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- /.col-lg-7 -->
+    <!-- </div> -->
+    <!-- /.row -->
+    <!-- </div> -->
+    <!-- /.container -->
+    <!-- </div> -->
+    <!-- /.innovation-block -->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Work Process Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="work-process-block mrb-200">
+      <div class="container ml-b-40">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-md-8">
+            <div class="section-title text-center" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+              <!-- <h4 class="title-sub">WORKFLOW</h4> /.title-sub -->
+              <h2 class="title-main">Why Choose Us?.</h2>
+              <!-- /.title-main -->
+              <div class="divider">
+                <img src="assets/images/icon/divider.png" alt="icon" />
+              </div>
+            </div>
+            <!-- /.section-title -->
+          </div>
+        </div>
+
+        <div class="row process-list">
+          <!--~./ Start Single Process ~-->
+          <div class="col-lg-3 col-md-6">
+            <div class="single-process" data-animate="hg-fadeInUp" data-duration="1.0s" data-delay="0.1s"
+              data-offset="100">
+              <div class="icon bg-zinnwaldite">
+                <span class="icon-binoculars-business-management-vision"></span>
+                <h3 class="process-no">1</h3>
+              </div>
+              <h2 class="process-step">Easy to Use</h2>
+            </div>
+          </div>
+          <!--~./ end single process ~-->
+
+          <!--~./ Start Single Process ~-->
+          <div class="col-lg-3 col-md-6">
+            <div class="single-process" data-animate="hg-fadeInUp" data-duration="1.0s" data-delay="0.15s"
+              data-offset="100">
+              <div class="icon bg-silver-tree">
+                <span class="icon-business-management-presentation-statistic-stats"></span>
+                <h3 class="process-no">2</h3>
+              </div>
+              <h2 class="process-step">Customizable</h2>
+            </div>
+          </div>
+          <!--~./ end single process ~-->
+
+          <!--~./ Start Single Process ~-->
+          <div class="col-lg-3 col-md-6">
+            <div class="single-process" data-animate="hg-fadeInUp" data-duration="1.0s" data-delay="0.2s"
+              data-offset="100">
+              <div class="icon bg-medium-purple">
+                <span class="icon-badge-pass-security-security-icon"></span>
+                <h3 class="process-no">3</h3>
+              </div>
+              <h2 class="process-step">Cloud-Based & Secure</h2>
+            </div>
+          </div>
+          <!--~./ end single process ~-->
+
+          <!--~./ Start Single Process ~-->
+          <div class="col-lg-3 col-md-6">
+            <div class="single-process" data-animate="hg-fadeInUp" data-duration="1.0s" data-delay="0.25s"
+              data-offset="100">
+              <div class="icon bg-curious-blue">
+                <span class="icon-rocket3"></span>
+                <h3 class="process-no">4</h3>
+              </div>
+              <h2 class="process-step">Integrated & Scalable</h2>
+            </div>
+          </div>
+          <!--~./ end single process ~-->
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!--~~./ end work process block ~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Testimonial Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div id="testimonial-block" class="testimonial-block mrb-200">
+      <div class="container ml-t-10 ml-b-30">
+        <!-- Title Row -->
+        <div class="row align-items-center justify-content-between">
+          <div class="col-lg-5 col-md-8">
+            <div class="section-title">
+              <!-- <h4 class="title-sub">testimonials <img src="assets/images/icon/divider.png" alt="icon"></h4> /.title-sub -->
+              <h2 class="title-main">
+                Rooted in authenticity and driven by trust.
+              </h2>
+              <!-- /.title-main -->
+            </div>
+            <!-- /.section-title -->
+            <div class="btn-links-area">
+              <button class="btn-links btn-prev">
+                <span class="icon-arrows"></span>
+              </button>
+              <button class="btn-links btn-next">
+                <span class="icon-arrows-1"></span>
+              </button>
+            </div>
+            <!-- /.btn-links-area -->
+          </div>
+          <!-- /.col-lg-5 -->
+
+          <div class="col-lg-6">
+            <div class="testimonial-slide-area">
+              <div class="testimonial-slick-wrapper">
+                <div class="slick-slide-item">
+                  <div class="testimonial-item">
+                    <div class="testimonial-item-inner">
+                      <div class="quote-icon">
+                        <img src="assets/images/icon/quote2.png" alt="Icon" />
+                      </div>
+                      <!-- /.quote-icon -->
+                      <div class="client-testimonial">
+
+                        <!-- /.client-thumb -->
+                        <div class="testimonial-details">
+                          <div class="details">
+                            <p>
+                              "Total control over policies!" Our compliance process used to be chaotic. With the Policy
+                              Manager, creating, approving, and updating policies is streamlined and audit-ready.
+                            </p>
+                          </div>
+                          <!-- /.details -->
+                          <div class="client-area">
+                            <h4 class="client-name"> - Policy Manager</h4>
+                            <!--  /.client-name -->
+                            <!-- <p class="client-designation">
+                                Compliance Officer
+                              </p> -->
+                          </div>
+                          <!-- /.client-area -->
+                        </div>
+                        <!-- /.testimonial-details -->
+                      </div>
+                      <!-- /.client-testimonial -->
+                    </div>
+                    <!-- /.testimonial-item-inner -->
+                  </div>
+                  <!-- /.testimonial-item -->
+                </div>
+                <!-- /.slick-slide-item -->
+
+                <div class="slick-slide-item">
+                  <div class="testimonial-item">
+                    <div class="testimonial-item-inner">
+                      <div class="quote-icon">
+                        <img src="assets/images/icon/quote2.png" alt="Icon" />
+                      </div>
+                      <!-- /.quote-icon -->
+                      <div class="client-testimonial">
+
+                        <!-- /.client-thumb -->
+                        <div class="testimonial-details">
+                          <div class="details">
+                            <p>
+                              "Reporting that actually drives action!" We now capture incidents faster, categorize them
+                              clearly, and assign follow-ups. It’s transformed how we handle risk across departments.
+                            </p>
+                          </div>
+                          <!-- /.details -->
+                          <div class="client-area">
+                            <h4 class="client-name"> - Incident Reporting</h4>
+                            <!--  /.client-name -->
+                            <!-- <p class="client-designation"></p> -->
+                          </div>
+                          <!-- /.client-area -->
+                        </div>
+                        <!-- /.testimonial-details -->
+                      </div>
+                      <!-- /.client-testimonial -->
+                    </div>
+                    <!-- /.testimonial-item-inner -->
+                  </div>
+                  <!-- /.testimonial-item -->
+                </div>
+                <!-- /.slick-slide-item -->
+
+                <div class="slick-slide-item">
+                  <div class="testimonial-item">
+                    <div class="testimonial-item-inner">
+                      <div class="quote-icon">
+                        <img src="assets/images/icon/quote2.png" alt="Icon" />
+                      </div>
+                      <!-- /.quote-icon -->
+                      <div class="client-testimonial">
+
+                        <!-- /.client-thumb -->
+                        <div class="testimonial-details">
+                          <div class="details">
+                            <p>
+                              "Credentialing Simplified!" Managing staff credentials used to be a nightmare. With the
+                              Credentialing System, we receive automated reminders, track expirations, and ensure
+                              compliance effortlessly.
+                            </p>
+                          </div>
+                          <!-- /.details -->
+                          <div class="client-area">
+                            <h4 class="client-name"> - Credentialing Application</h4>
+                            <!--  /.client-name -->
+                            <!-- <p class="client-designation"></p> -->
+                          </div>
+                          <!-- /.client-area -->
+                        </div>
+                        <!-- /.testimonial-details -->
+                      </div>
+                      <!-- /.client-testimonial -->
+                    </div>
+                    <!-- /.testimonial-item-inner -->
+                  </div>
+                  <!-- /.testimonial-item -->
+                </div>
+                <!-- /.slick-slide-item -->
+              </div>
+            </div>
+            <!-- /.testimonial-slide-area -->
+          </div>
+          <!-- /.col-lg-6 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!--~~./ end testimonial block ~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Call To Action
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="call-to-action bg-center" style="background-image: url('assets/images/bg/map.png')">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-animate="hg-fadeInUp" data-duration="1.0s" data-offset="100">
+            <h2 class="call-to-title">
+              Proud to Deliver Exceptional Solutions & Support.
+            </h2>
+            <!-- /.call-to-title -->
+            <div class="action-btn-group pd-t-50">
+              <a href="contact.html" class="btn btn-default btn-primary">Let's Talk</a>
+              <!-- <a href="contact.html" class="btn btn-default">Let's Talk</a> -->
+            </div>
+            <!-- /.action-btn-group -->
+          </div>
+          <!-- /.col-lg-8 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!--~~./ end call to action ~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Site Footer
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <footer class="site-footer footer-style-one bg-zumthor  pd-b-195">
+      <div class="waves-effect top" style="background: url('assets/images/shape/waves-top.png')"></div>
+      <div class="waves-effect bottom" style="background: url('assets/images/shape/waves-bottom.png')"></div>
+
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Start Newsletter Block
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <div class="newsletter-block mrb-90">
+        <div class="container">
+          <div class="row justify-content-center contact-block-area">
+            <div class="col-lg-10">
+              <div class="contact-form-area">
+                <div>
+                  <!-- Subscribe Form -->
+                  <form class="contact-form hg-form-email" id="mc-form-one">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="section-title text-center">
+                          <h2 class="title-main">Request a Live Demo</h2>
+                          <div class="divider">
+                            <img src="assets/images/icon/divider.png" alt="icon" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input id="first-name" name="firstName" placeholder="First Name*" type="text" required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input id="last-name" name="lastName" placeholder="Last Name*" type="text" required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input id="company-name" name="companyName" placeholder="Company Name*" type="text"
+                            required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input id="business-email" name="businessEmail" placeholder="Business Email*" type="email"
+                            required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input id="business-phone" name="businessPhone" placeholder="Business Phone*" type="text"
+                            required />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input id="job-title" name="jobTitle" placeholder="Job Title*" type="text" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group custom-select-wrapper">
+                      <select id="demo-product" name="demoProduct" required>
+                        <option value="">Product Demo to Schedule*</option>
+                        <option value="Policy_Manager">Policy Manager</option>
+                        <option value="Incident_Reporting">Incident Reporting</option>
+                        <option value="Credential_Application">Credential Application</option>
+                      </select>
+                    </div>
+                    <div class="mt-3 d-flex justify-content-center">
+                      <button type="submit" class="btn btn-default btn-contact">
+                        <span>Book a Demo</span>
+                        <div class='status'><i class='fa fa-circle-o-notch fa-spin spinner'></i></div>
+                      </button>
+                    </div>
+                  </form>
+                  <div id="popup-message"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+      <!--~~./ end newsletter block ~~-->
+
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+              Start Footer Widget Area
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <div class="footer-widget-area">
+        <div class="container">
+          <div class="row">
+            <!--~~~~~ Start Widget Links ~~~~~-->
+            <div class="col-lg-3">
+              <aside class="widget widget_links">
+                <h2 class="widget-title">Contact Us</h2>
+                <div class="widget-content">
+                  <span style="font-weight: bold;">Quick Contact - USA</span>
+                  <p>2601 Cambridge Ct, Suite 432, Auburn Hills, Michigan, USA 48326<br/>
+                  +1 (248) 812 2100</p>
+                  <span style="font-weight: bold;">Quick Contact - India</span>
+                  <p>#405A, 4th Floor, Manjeera Majestic Commercial, KPHB, Kukatpally, Hyderabad, Telangana, IN -500072<br/>
+                   +1 (313) 221 9365, +91 97004 39452</p>
+                  <p>Email: info@stelliteworks.com</p>
+                </div>
+              </aside>
+            </div>
+            <!--~./ end links widget ~-->
+
+            <!--~~~~~ Start Widget Links ~~~~~-->
+            <div class="col-lg-3">
+              <aside class="widget widget_links">
+                <h2 class="widget-title">Services</h2>
+                <div class="widget-content">
+                  <ul>
+                    <li><a href="incident-reporting-portfolio.html">Incident Reporting</a></li>
+                    <li><a href="policy-manager-portfolio.html">Policy Manager</a></li>
+                    <li><a href="credentialing-portfolio.html">Credentialing Application</a></li>
+                    <!-- <li><a href="#">Business</a></li> -->
+                    <!-- <li><a href="#">User Interaction Design</a></li>
+                                                                        <li><a href="#">UX Consultant</a></li> -->
+                  </ul>
+                </div>
+              </aside>
+            </div>
+            <!--~./ end links widget ~-->
+
+            <!--~~~~~ Start Widget Links ~~~~~-->
+            <div class="col-lg-3">
+              <aside class="widget widget_links">
+                <h2 class="widget-title">Support</h2>
+                <div class="widget-content">
+                  <ul>
+                    <!-- <li><a href="blog.html">Blog</a></li> -->
+                    <li><a href="TermsOfUse.html">Terms Of Use</a></li>
+                    <li><a href="PolicyPrivacy.html">Policy Privacy</a></li>
+                    <!-- <li><a href="#">Contact Us</a></li> -->
+                  </ul>
+                </div>
+              </aside>
+            </div>
+
+            <!--~./ end links widget ~-->
+
+            <!--~~~~~ Start Widget Social Share ~~~~~-->
+            <div class="col-lg-3" >
+              <aside class="widget social-share-widget">
+                <h2 class="widget-title">Follow Us</h2>
+                <div class="widget-content">
+                  <ul class="footer-social">
+                    <li>
+                      <a href="https://www.facebook.com/stelliteworks/" target="_blank" rel="noopener noreferrer"><i
+                          class="fa fa-facebook"></i></a>
+                    </li>
+                    <!-- <li><a href="www.x.com"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+                    <li>
+                      <a href="https://www.linkedin.com/company/stellite-works-llc/" target="_blank"
+                        rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                  </ul>
+                  <!--  /.footer-social -->
+                </div>
+              </aside>
+            </div>
+            <!--~./ end social share widget ~-->
+          </div>
+        </div>
+      </div>
+      <!--~./ end footer widgets area ~-->
+
+      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Start Footer Bottom Area
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <div class="footer-bottom-area pd-t-40">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <div class="footer-logo" style="display: flex;justify-content: center;">
+                <div style="display: flex;">
+                  <a href="index.html"><img src="assets/images/logo/CT_Logo_Enhanced 1 1.png" alt="Logo" style="height: 67px; width: 67px;"/></a>
+                  <p style="font-weight: bold;font-size: 38px;padding-top: 1px;">CuraTrax</p>
+                </div>
+              </div>
+              <!--~./ footer logo ~-->
+              <div class="copyright-text">
+                <p>© 2025.<a href="https://www.stelliteworks.com/">By Stellite Works LLC.</a><span
+                    style="padding-left: 4px;">All Rights Reserved.</span></p>
+              </div>
+              <!--~./ end footer menu ~-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--~./ end footer bottom area ~-->
+    </footer>
+    <!--~./ end site footer ~-->
+  </div>
+  <!--~~./ end site content ~~-->
+
+  <!-- All The JS Files
+    ================================================== -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/jquery.validate.min.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/theia-sticky-sidebar.min.js"></script>
+  <script src="assets/js/ResizeSensor.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/packery-mode.pkgd.min.js"></script>
+  <script src="assets/js/jquery.fitvids.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/simple-scrollbar.min.js"></script>
+  <script src="assets/js/scrolla.jquery.min.js"></script>
+  <script src="assets/js/odometer.min.js"></script>
+  <script src="assets/js/isInViewport.jquery.js"></script>
+  <script src="assets/js/TweenMax.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- main-js -->
+  <script>
+    $(document).ready(function () {
+      console.log("✅ jQuery Validate script initialized");
+      const $form = $("#mc-form-one");
+      const $popup = $("#popup-message");
+      const $button = $form.find(".btn-contact");
+
+      if (!$form.length || !$popup.length) {
+        console.error("❌ Form or popup element not found");
+        return;
+      }
+
+      // Log form submission attempts
+      $form.on('submit', function (e) {
+        console.log("Form submit event triggered");
+      });
+
+      // Initialize jQuery Validate
+      $form.validate({
+        rules: {
+          firstName: "required",
+          lastName: "required",
+          companyName: "required",
+          businessEmail: {
+            required: true,
+            email: true
+          },
+          businessPhone: {
+            required: true,
+            digits: true // ✅ Only allow numbers
+          },
+          jobTitle: "required",
+          demoProduct: "required"
+        },
+        messages: {
+          firstName: "Please enter your first name",
+          lastName: "Please enter your last name",
+          companyName: "Please enter your company name",
+          businessEmail: {
+            required: "Please enter your business email",
+            email: "Please enter a valid email address"
+          },
+          businessPhone: {
+            required: "Please enter your phone number",
+            digits: "Only numbers are allowed"
+          },
+          jobTitle: "Please enter your job title",
+          demoProduct: "Please select a product to demo"
+        },
+        errorPlacement: function (error, element) {
+          console.log("Placing error for:", element.attr('name'));
+          error.insertAfter(element);
+        },
+        submitHandler: function (form) {
+          console.log("✅ submitHandler called");
+          $button.addClass("processing"); // Show spinner
+          setTimeout(() => { // Simulate processing delay
+            showPopup("Thank you! We’ll be in touch with you shortly.", true);
+            $button.removeClass("processing");
+            setTimeout(() => {
+              form.reset();
+            }, 3000);
+          }, 1000); // 1-second delay for demo
+        },
+        invalidHandler: function (event, validator) {
+          console.log("❌ invalidHandler called", validator.errorList);
+          showPopup("Please fill all required fields correctly!", false);
+        }
+      });
+      $('input[name="businessPhone"]').on('input', function () {
+        this.value = this.value.replace(/\D/g, ''); // Remove non-digits
+      });
+      function showPopup(message, success) {
+        console.log(`Showing popup: ${message}, Success: ${success}`);
+        $popup.text(message);
+        $popup.css("backgroundColor", success ? "#28a745" : "#dc3545");
+        $popup.fadeIn(400);
+        setTimeout(() => {
+          $popup.fadeOut(400);
+        }, 3000);
+      }
+    });
+  </script>
+
+</body>
+
+</html>
